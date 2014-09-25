@@ -1,6 +1,6 @@
 {
   "name": "istanbul-cobertura-badger",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Istanbul test coverage report badger task.",
   "keywords": [
     "gulp",
@@ -29,7 +29,10 @@
     "pretest": "jshint index.js"
   },
   "dependencies": {
-
+    "xml-splitter": "~1.2.1",
+    "path": "~0.4.9",
+    "fs": "0.0.2",
+    "request": "~2.44.0"
   },
   "devDependencies": {
     "gulp": "^3.6.2",
