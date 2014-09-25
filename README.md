@@ -17,9 +17,9 @@ Gulp or Grunt.
 
 It uses https://github.com/badges/shields to create the badge.
 
-* Green: >= 80% overall coverage (http://img.shields.io/badge/coverage-93%-brightgreen.svg)
-* Yellow: 65% <= overall coverage < 80% (http://img.shields.io/badge/coverage-74%-yellow.svg)
-* Red: < 65% overall coverage (http://img.shields.io/badge/coverage-32%-red.svg)
+* Green: >= 80% overall coverage ![](http://img.shields.io/badge/coverage-93%-brightgreen.svg)
+* Yellow: 65% <= overall coverage < 80% ![](http://img.shields.io/badge/coverage-74%-yellow.svg)
+* Red: < 65% overall coverage ![](http://img.shields.io/badge/coverage-32%-red.svg)
 
 The idea is to serve in the Node.js README for internal use in a GitHub enterprise machine along with
 Jenkins.
