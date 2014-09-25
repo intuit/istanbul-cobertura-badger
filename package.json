@@ -1,0 +1,46 @@
+{
+  "name": "istanbul-cobertura-badger",
+  "version": "0.0.1",
+  "description": "Istanbul test coverage report badger task.",
+  "keywords": [
+    "gulp",
+    "grunt",
+    "coverage",
+    "istanbul",
+    "unit test",
+    "report",
+    "github badge"
+  ],
+  "homepage": "https://github.com/marcellodesales/istanbul-cobertura-badger",
+  "bugs": {
+    "url": "https://github.com/marcellodesales/istanbul-cobertura-badger/issues"
+  },
+  "author": {
+    "name": "Marcello de Sales",
+    "email": "Marcello_deSales@intuit.com",
+    "url": "https://github.com/marcellodesales"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marcellodesales/istanbul-cobertura-badger.git"
+  },
+  "scripts": {
+    "pretest": "jshint index.js"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-mocha": "^1.0.0",
+    "jshint": "^2.5.0",
+    "mocha": "^1.18.2",
+    "rimraf": "^2.2.8"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}
