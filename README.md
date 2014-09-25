@@ -1,5 +1,6 @@
 istanbul-cobertura-badger
 =========================
+[![Travis](https://travis-ci.org/marcellodesales/istanbul-cobertura-badger.svg)](https://travis-ci.org/marcellodesales/istanbul-cobertura-badger)
 
 Create a [coverage | 100%] badge by reading the Cobertura coverage report from node-istanbul.
 
@@ -13,6 +14,15 @@ http://stackoverflow.com/questions/26028024/how-to-make-a-gulp-code-coverage-bad
 
 I want to be able to generate the coverage report after code coverage runs by any Node.js build system like
 Gulp or Grunt.
+
+It uses https://github.com/badges/shields to create the badge.
+
+* Green: >= 80% overall coverage [![green](http://img.shields.io/badge/coverage-100%-brightgreen.svg)]
+* Yellow: 65% <= overall coverage < 80% [![green](http://img.shields.io/badge/coverage-100%-yellow.svg)]
+* Red: < 65% overall coverage [![green](http://img.shields.io/badge/coverage-100%-red.svg)]
+
+The idea is to serve in the Node.js README for internal use in a GitHub enterprise machine along with
+Jenkins.
 
 Installation
 =========
