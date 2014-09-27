@@ -27,7 +27,7 @@ function gulpIstanbulBadger(coberturaFile, destinationDir, downloadCallback) {
   var coberturaXmlReport = fs.readFileSync(coberturaFile);
   var xs = new XMLSplitter('/coverage');
   xs.on('data', function(data) {
-    var overallPercentage = ((parseFloat(data["line-rate"]) + parseFloat(data["branch-rate"])) / 2) * 100;
+    var overallPercentage = (((parseFloat(data["line-rate"]) + parseFloat(data["branch-rate"])) / 2) * 100).toFixed(2);
     var color = overallPercentage >= 80 ? "brightgreen" : (overallPercentage >= 75 ? "yellow" : "red");
     var url = 'http://img.shields.io/badge/coverage-' + overallPercentage + '%-' + color + '.svg';
     var badgeFileName = path.join(destinationDir, "coverage.svg");
