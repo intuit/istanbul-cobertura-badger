@@ -2,7 +2,7 @@ istanbul-cobertura-badger
 =========================
 [![Travis](https://travis-ci.org/marcellodesales/istanbul-cobertura-badger.svg)](https://travis-ci.org/marcellodesales/istanbul-cobertura-badger) [![Code Climate](https://codeclimate.com/github/marcellodesales/istanbul-cobertura-badger/badges/gpa.svg)](https://codeclimate.com/github/marcellodesales/istanbul-cobertura-badger) [![Code Climate](https://david-dm.org/marcellodesales/istanbul-cobertura-badger.png)](https://david-dm.org/marcellodesales/istanbul-cobertura-badger)
 
-Create a [coverage | 100%] badge by reading the Cobertura coverage report from node-istanbul.
+Create a [coverage | 100%] badge by reading the Cobertura coverage report from node-istanbul based on https://github.com/badges/shields.
 
 Requirements
 ========
@@ -12,14 +12,12 @@ including code coverage. I posted a question on Stackoverflow about it:
 
 http://stackoverflow.com/questions/26028024/how-to-make-a-gulp-code-coverage-badge
 
-I want to be able to generate the coverage report after code coverage runs by any Node.js build system like
-Gulp or Grunt.
-
-It uses https://github.com/badges/shields to create the badge.
-
-* Green: >= 80% overall coverage ![](http://img.shields.io/badge/coverage-93%-brightgreen.svg)
-* Yellow: 65% <= overall coverage < 80% ![](http://img.shields.io/badge/coverage-74%-yellow.svg)
-* Red: < 65% overall coverage ![](http://img.shields.io/badge/coverage-32%-red.svg)
+* I want to be able to generate the coverage report after code coverage runs by any Node.js build system like
+Gulp or Grunt, and be able to publish the badge on the README.md file through a Jenkins link;
+* The badge displays appropriate colors for the badge.
+ * Green: >= 80% overall coverage ![](http://img.shields.io/badge/coverage-93%-brightgreen.svg)
+ * Yellow: 65% <= overall coverage < 80% ![](http://img.shields.io/badge/coverage-74%-yellow.svg)
+ * Red: < 65% overall coverage ![](http://img.shields.io/badge/coverage-32%-red.svg)
 
 The idea is to serve in the Node.js README for internal use in a GitHub enterprise machine along with
 Jenkins.
