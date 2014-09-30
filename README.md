@@ -4,6 +4,8 @@ istanbul-cobertura-badger
 
 Create a [coverage | 100%] badge by reading the Cobertura coverage report from node-istanbul based on https://github.com/badges/shields.
 
+[![NPM](https://nodei.co/npm/istanbul-cobertura-badger.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/istanbul-cobertura-badger/)
+
 Requirements
 ========
 
