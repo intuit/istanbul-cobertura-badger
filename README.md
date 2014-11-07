@@ -52,7 +52,7 @@ var coberturaBadger = require('istanbul-cobertura-badger');
 var coberturaFile = "build/tests/cobertura-coverage.xml";
 var destinationPath = path.join(process.env.PWD, "build/tests");
 
-coverageBadger(coberturaFile, destinationPath, function() {
+coberturaBadger(coberturaFile, destinationPath, function() {
   console.log("Badge created at " + destinationPath + "/cobertura.svg");
 });
 ```
