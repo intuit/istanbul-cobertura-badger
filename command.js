@@ -8,7 +8,7 @@ var input = "./coverage/cobertura-coverage.xml";
 var output = "./coverage";
 
 if(process.argv.length > 2) {input = process.argv[2];}
-if(process.argv.length > 3) {input = process.argv[3];}
+if(process.argv.length > 3) {output = process.argv[3];}
 if(process.argv.length > 4) {
     console.error("usage: istanbul-cobertura-badger [path/to/cobertura-coverage.xml] [outdir]");
     process.exit(1);
