@@ -82,6 +82,16 @@ gulp.task('test', function() {
 });
 ```
 
+CLI
+===
+
+```
+$ istanbul report cobertura
+$ mkdir -p out
+$ istanbul-cobertura-badger coverage/cobertura-coverage.xml out
+Badge created at /my/project/out/coverage.svg
+```
+
 Contributing
 ==============
 

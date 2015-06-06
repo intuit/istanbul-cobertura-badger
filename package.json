@@ -21,6 +21,9 @@
     "url": "https://github.com/marcellodesales"
   },
   "main": "./index.js",
+  "bin": {
+    "istanbul-cobertura-badger": "./command.js"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:marcellodesales/istanbul-cobertura-badger.git"
