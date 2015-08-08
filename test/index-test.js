@@ -6,7 +6,7 @@ var should = require("chai").should;
 var fs = require("fs");
 
 var badger = require("../lib");
-var destinationPath = path.resolve(__dirname, "..");
+var destinationPath = path.resolve(__dirname, "..", "coverage");
 
 describe("istanbul-cobertura-badger", function() {
 
