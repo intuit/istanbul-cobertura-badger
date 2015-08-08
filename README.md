@@ -1,9 +1,8 @@
 istanbul-cobertura-badger
 =========================
-[![Travis](https://travis-ci.org/marcellodesales/istanbul-cobertura-badger.svg)](https://travis-ci.org/marcellodesales/istanbul-cobertura-badger) [![Code Climate](https://codeclimate.com/github/marcellodesales/istanbul-cobertura-badger/badges/gpa.svg)](https://codeclimate.com/github/marcellodesales/istanbul-cobertura-badger)
-[![Dependency Status](https://david-dm.org/marcellodesales/istanbul-cobertura-badger.svg)](https://david-dm.org/marcellodesales/istanbul-cobertura-badger)
+[![Travis](https://travis-ci.org/marcellodesales/istanbul-cobertura-badger.svg)](https://travis-ci.org/marcellodesales/istanbul-cobertura-badger) [![npm version](https://badge.fury.io/js/istanbul-cobertura-badger.svg)](http://badge.fury.io/js/istanbul-cobertura-badger) [![Codacy Badge](https://www.codacy.com/project/badge/29edfafa9850429c9a4ac0be2742956b)](https://www.codacy.com/app/marcello-desales/istanbul-cobertura-badger) [![Dependency Status](https://gemnasium.com/marcellodesales/istanbul-cobertura-badger.svg)](https://gemnasium.com/marcellodesales/istanbul-cobertura-badger) ![License](https://img.shields.io/badge/license-MIT-lightgray.svg) 
 
-Create a [coverage | 100%] badge by reading the Cobertura coverage report from node-istanbul based on https://github.com/badges/shields.
+Creates a coverage badge by reading the Cobertura XML coverage report from node-istanbul reports using  https://github.com/badges/shields.
 
 [![NPM](https://nodei.co/npm/istanbul-cobertura-badger.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/istanbul-cobertura-badger/)
 
