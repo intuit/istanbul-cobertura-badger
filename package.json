@@ -32,7 +32,7 @@
   "scripts": {
     "pretest": "rm -rf coverage/ && jshint --reporter=node_modules/jshint-stylish lib/*.js test/*.js && ./node_modules/jscs/bin/jscs lib test",
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report cobertura --report text --report html --report lcov -- -R spec",
-    "posttest": "istanbul-cobertura-badger && cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "posttest": "node ./lib/cli.js && cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
     "http-request": "^0.7.0",
