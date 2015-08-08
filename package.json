@@ -11,6 +11,7 @@
     "report",
     "github badge"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/marcellodesales/istanbul-cobertura-badger",
   "bugs": {
     "url": "https://github.com/marcellodesales/istanbul-cobertura-badger/issues"
