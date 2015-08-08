@@ -6,7 +6,7 @@ var should = require("chai").should;
 var fs = require("fs");
 
 var badger = require("../lib");
-var destinationPath = path.resolve(__dirname, "..", "coverage");
+var destinationPath = __dirname;
 
 describe("istanbul-cobertura-badger", function() {
 
@@ -25,11 +25,22 @@ describe("istanbul-cobertura-badger", function() {
         var coverageBadgePath = path.normalize(path.resolve(destinationPath, "coverage.svg"));
         expect(status.file).to.equal(coverageBadgePath);
 
-        var stats = fs.statSync(coverageBadgePath);
-        expect(stats).to.be.an("object");
-        expect(stats.isFile()).to.be.true;
+        // Verify that the badge file was successfully created
+        fs.stat(coverageBadgePath, function gettingStats(err, stats) {
+          expect(err).to.be.null;
+          expect(stats).to.be.an("object");
+          expect(stats.isFile()).to.be.true;
+          expect(stats.size).to.be.above(0);
 
-        done();
+          fs.unlink(coverageBadgePath, function(err) {
+            if (err) {
+              console.log(err);
+            }
+            done();
+          });
+
+        });
+
       });
     });
 
