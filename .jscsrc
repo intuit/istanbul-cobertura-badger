@@ -1,0 +1,21 @@
+{
+    "preset": "google",
+    "fileExtensions": [ ".js", "jscs" ],
+    "requireParenthesesAroundIIFE": true,
+    "requireBlocksOnNewline": true,
+    "maximumLineLength": 120,
+    "validateLineBreaks": "LF",
+    "validateIndentation": 2,
+    "validateQuoteMarks": { "mark": "\"", "escape": true },
+
+    "disallowKeywords": ["with"],
+    "disallowSpacesInsideObjectBrackets": null,
+    "disallowImplicitTypeConversion": ["string"],
+    "disallowMixedSpacesAndTabs": true,
+
+    "safeContextKeyword": "_this",
+
+    "excludeFiles": [
+      "node_modules/**"
+    ]
+}
