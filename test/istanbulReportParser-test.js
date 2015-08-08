@@ -1,9 +1,6 @@
 "use strict";
 
-var path = require("path");
 var expect = require("chai").expect;
-var should = require("chai").should;
-
 var parser = require("../lib/istanbulReportParser");
 
 describe("Coverage Parser", function() {

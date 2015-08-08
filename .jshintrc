@@ -1,4 +1,6 @@
 {
+    // This option warns when you define and never use your variables.
+    "unused": true,
     // Whether the scan should stop on first error.
     "passfail": false,
     // Maximum errors before stopping.

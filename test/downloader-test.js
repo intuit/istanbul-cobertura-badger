@@ -1,9 +1,6 @@
 "use strict";
 
-var path = require("path");
 var expect = require("chai").expect;
-var should = require("chai").should;
-
 var downloader = require("../lib/downloader");
 
 describe("downloader", function() {
