@@ -5,7 +5,7 @@ var expect = require("chai").expect;
 var fs = require("fs");
 
 var badger = require("../lib");
-var destinationPath = __dirname;
+var destinationDir = __dirname;
 
 describe("istanbul-cobertura-badger", function() {
 
@@ -14,15 +14,20 @@ describe("istanbul-cobertura-badger", function() {
     it("should open the proper path, compute the overall coverage percentage and create the badge", function(done) {
 
       // Use the fixture that's without problems
-      var reportSamplePath = path.resolve(__dirname, "fixture", "istanbul-report.xml");
+      var opts = {
+        destinationDir: destinationDir,
+        istanbulReportFile: path.resolve(__dirname, "fixture", "istanbul-report.xml")
+      };
 
       // Load the badge for the report
-      badger(reportSamplePath, destinationPath, function parsingResults(err, status) {
+      badger(opts, function parsingResults(err, badgeStatus) {
         expect(err).to.be.null;
-        expect(status).to.be.an("object");
+        expect(badgeStatus).to.be.an("object");
 
-        var coverageBadgePath = path.normalize(path.resolve(destinationPath, "coverage.svg"));
-        expect(status.file).to.equal(coverageBadgePath);
+        console.log(badgeStatus);
+
+        var coverageBadgePath = path.normalize(path.resolve(destinationDir, "coverage.svg"));
+        expect(coverageBadgePath.indexOf("coverage.svg")).to.be.above(0);
 
         // Verify that the badge file was successfully created
         fs.stat(coverageBadgePath, function gettingStats(err, stats) {
@@ -50,10 +55,13 @@ describe("istanbul-cobertura-badger", function() {
     it("should not parse and properly show the parsing error", function(done) {
 
       // Use the fixture that's without problems
-      var reportSamplePath = path.resolve(__dirname, "fixture", "istanbul-report-with-problem.xml");
+      var opts = {
+        destinationDir: destinationDir,
+        istanbulReportFile: path.resolve(__dirname, "fixture", "istanbul-report-with-problem.xml")
+      };
 
       // Try loading the incorrect badge
-      badger(reportSamplePath, destinationPath, function parsingResults(err, status) {
+      badger(opts, function parsingResults(err, status) {
         expect(err).to.be.an("Error");
         expect(status).to.be.undefined;
 
