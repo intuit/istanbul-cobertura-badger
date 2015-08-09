@@ -20,9 +20,11 @@ describe("istanbul-cobertura-badger", function() {
       };
 
       // Load the badge for the report
-      badger(opts, function parsingResults(err, status) {
+      badger(opts, function parsingResults(err, badgeStatus) {
         expect(err).to.be.null;
-        expect(status).to.be.an("object");
+        expect(badgeStatus).to.be.an("object");
+
+        console.log(badgeStatus);
 
         var coverageBadgePath = path.normalize(path.resolve(destinationDir, "coverage.svg"));
         expect(coverageBadgePath.indexOf("coverage.svg")).to.be.above(0);
