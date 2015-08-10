@@ -79,12 +79,12 @@ The overall threshold is computed by using the `line rate`, `branch rate` and `f
 ```js
   // The thresholds to be used to give colors to the badge.
   opts.thresholds = {
-    excelent: 90,
+    excellent: 90,
     good: 65
   };
 ```
 
-* *Green*: coverage result >= opts.thresholds.excelent;
+* *Green*: coverage result >= opts.thresholds.excellent;
 * *Yellow*: coverage result >= opts.thresholds.good;
 * *Red*: coverage result < opts.thresholds.good.
 
@@ -101,9 +101,9 @@ var opts = {
   destinationDir: __dirname,
   istanbulReportFile: path.resolve(__dirname, "coverage", "cobertura-coverage.xml"),
   thresholds: {
-    // overall percent >= excelent, green badge
-    excelent: 90,
-    // overall percent < excelent and >= good, yellow badge
+    // overall percent >= excellent, green badge
+    excellent: 90,
+    // overall percent < excellent and >= good, yellow badge
     good: 65
     // overall percent < good, red badge
   }
@@ -172,11 +172,91 @@ gulp.task('test', function() {
 CLI
 ===
 
+You can now use the CLI to create the badge for ANY XML Cobertura report created from Istanbul or Java applications.
+
+CLI Options
+------
+
+The cli prints the following help.
+
 ```
-$ istanbul report cobertura
-$ mkdir -p out
-$ istanbul-cobertura-badger coverage/cobertura-coverage.xml out
-Badge created at /my/project/out/coverage.svg
+$ istanbul-cobertura-badger 
+
+  Usage: cli [options]
+
+  Generates a badge for a given Cobertura XML report
+
+  Options:
+
+    -h, --help                          output usage information
+    -V, --version                       output the version number
+    -f, --defaults                      Use the default values for all the input.
+    -e, --excellentThreashold <n>       The threshold for green badges, where coverage >= -e
+    -g, --goodThreashold <n>            The threshold for yellow badges, where -g <= coverage < -e  
+    -r, --reportFile <report>           The istanbul cobertura XML file path.
+    -d, --destinationDir <destination>  The directory where 'coverage.svg' will be generated at.
+    -v, --verbose                       Prints the metadata for the command
+
+  Examples:
+
+    $ istanbul-cobertura-coverage -e 90 -g 65 -r coverage/cobertura.xml -d coverage/
+      * Green: coverage >= 90
+      * Yellow: 65 <= coverage < 90
+      * Red: coverage < 65
+      * Created at the coverage directory from the given report.
+
+    $ istanbul-cobertura-coverage -e 80 -d /tmp/build
+      * Green: coverage >= 80
+      * Yellow: 65 <= coverage < 80
+      * Red: coverage < 65
+```
+
+CLI Default Input
+-----
+
+Run the CLI using the default values defined above. Here's the example of running against this project.
+
+```
+$ istanbul-cobertura-badger -f -v
+{ overallPercent: 91,
+  functionRate: 1,
+  lineRate: 0.9309999999999999,
+  branchRate: 0.8167,
+  url: 'http://img.shields.io/badge/coverage-91%-brightgreen.svg',
+  badgeFile: 
+   { downloaded: true,
+     filePath: '/home/mdesales/dev/github/intuit/istanbul-cobertura-badger/coverage/coverage.svg',
+     size: 730 },
+  color: 'brightgreen' }
+Badge created at /home/mdesales/dev/github/intuit/istanbul-cobertura-badger/coverage/coverage.svg
+```
+
+CLI Simple Output
+-----
+
+Just use the simple command with some options.
+
+```
+$ istanbul-cobertura-badger -e 85 -g 70 -r test/fixture/istanbul-report.xml -d /tmp/
+Badge created at /tmp/coverage.svg
+
+```
+
+CLI Verbose Output
+-----
+
+The overall information collected is also presented when using the verbose option.
+
+```
+$ istanbul-cobertura-badger -e 85 -g 70 -r test/fixture/istanbul-report.xml -d /tmp/ -v
+{ overallPercent: 66,
+  functionRate: 0.7368421052631579,
+  lineRate: 0.8034,
+  branchRate: 0.47369999999999995,
+  url: 'http://img.shields.io/badge/coverage-66%-red.svg',
+  badgeFile: { downloaded: true, filePath: '/tmp/coverage.svg', size: 733 },
+  color: 'red' }
+Badge created at /tmp/coverage.svg
 ```
 
 Contributing
