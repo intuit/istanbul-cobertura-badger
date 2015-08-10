@@ -1,6 +1,6 @@
 {
   "name": "istanbul-cobertura-badger",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Istanbul test coverage report badger task.",
   "keywords": [
     "gulp",
@@ -11,6 +11,7 @@
     "report",
     "github badge"
   ],
+  "license": "MIT",
   "homepage": "https://github.com/marcellodesales/istanbul-cobertura-badger",
   "bugs": {
     "url": "https://github.com/marcellodesales/istanbul-cobertura-badger/issues"
@@ -20,29 +21,39 @@
     "email": "Marcello_deSales@intuit.com",
     "url": "https://github.com/marcellodesales"
   },
+  "contributors": [
+    "marcellodesales <Marcello_deSales@intuit.com> (http://about.me/marcellodesales)",
+    "jwalton <npm@lucid.thedreaming.org> (https://github.com/jwalton)",
+    "olivierntk <Olivier_Nguyen@intuit.com> (https://github.com/olivierntk)"
+  ],
   "main": "./index.js",
   "bin": {
-    "istanbul-cobertura-badger": "./command.js"
+    "istanbul-cobertura-badger": "./lib/cli.js"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:marcellodesales/istanbul-cobertura-badger.git"
   },
   "scripts": {
-    "pretest": "jshint index.js"
+    "pretest": "rm -rf coverage/ && jshint --reporter=node_modules/jshint-stylish lib/*.js test/*.js && ./node_modules/jscs/bin/jscs lib test",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report cobertura --report text --report html --report lcov -- -R spec",
+    "posttest": "node ./lib/cli.js -f -v && cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "dependencies": {
-    "xml-splitter": "~1.2.1",
-    "path": "~0.4.9",
-    "fs": "0.0.2",
-    "request": "~2.44.0"
+    "commander": "^2.8.1",
+    "http-request": "^0.7.0",
+    "xml-splitter": "~1.2.1"
   },
   "devDependencies": {
-    "gulp": "^3.6.2",
-    "gulp-mocha": "^1.0.0",
+    "chai": "^3.2.0",
+    "codacy-coverage": "^1.1.2",
+    "coveralls": "^2.11.3",
+    "istanbul": "^0.3.17",
+    "jscs": "^2.0.0",
     "jshint": "^2.5.0",
-    "mocha": "^1.18.2",
-    "rimraf": "^2.2.8"
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "0.0.2"
   },
   "licenses": [
     {
