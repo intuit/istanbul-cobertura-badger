@@ -8,7 +8,7 @@ deploy:
   provider: npm
   email: marcello.desales@gmail.com
   api_key:
-    secure: f6/zoIKJPU7qgF+1zvwD/5WMmVAtKq/9/69LhNOM3hp1SBUbLLyS8rhVmQ579Oi48BXLWYPvBcNxgzRtnBi1BhhhI8XCCywBL6kndxorzyVzdi9V6yp6JvBRZT20Gm8XFsfJ4JMzwcw4QTZ1vRXarj9Qj9FgrkpC0QGwn4WN0qA=
+    secure: pgjFr5fV3/x92GM/SWS5Hqsu6zyuoGks4sdpuIykz1HpbxSMddv/iVAwHVnkDY04cmkVU90ENPdLDDO42sOwTxIOaDoVPpZZSyKIvm6EmFA/kLA+DYh1IyPfbuHSsXreIQXHhqCRQDo98e55UGyOpyCKfW+HLUXeiULMzPLQNN0=
   on:
     tags: true
     branch: master
