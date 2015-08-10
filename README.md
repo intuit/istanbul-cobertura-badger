@@ -93,7 +93,7 @@ Upon calling the callback function, the file `cobertura.svg` will be available i
 Examples
 ========
 
-```
+```js
 var coberturaBadger = require('istanbul-cobertura-badger');
 
 // Use the fixture that's without problems
@@ -138,7 +138,7 @@ An example of a successful badge creation is as follows:
 Gulp Build
 =========
 
-```
+```js
 gulp.task('test', function() {
   gulp.src('src/**/*.js')
     .pipe(istanbul()) // coverying files
@@ -216,7 +216,7 @@ CLI Default Input
 
 Run the CLI using the default values defined above. Here's the example of running against this project.
 
-```
+```js
 $ istanbul-cobertura-badger -f -v
 { overallPercent: 91,
   functionRate: 1,
@@ -247,7 +247,7 @@ CLI Verbose Output
 
 The overall information collected is also presented when using the verbose option.
 
-```
+```js
 $ istanbul-cobertura-badger -e 85 -g 70 -r test/fixture/istanbul-report.xml -d /tmp/ -v
 { overallPercent: 66,
   functionRate: 0.7368421052631579,
