@@ -1,6 +1,6 @@
 {
   "name": "istanbul-cobertura-badger",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "Istanbul test coverage report badger task.",
   "keywords": [
     "gulp",
@@ -21,6 +21,11 @@
     "email": "Marcello_deSales@intuit.com",
     "url": "https://github.com/marcellodesales"
   },
+  "contributors": [
+    "marcellodesales <Marcello_deSales@intuit.com> (http://about.me/marcellodesales)",
+    "jwalton <npm@lucid.thedreaming.org> (https://github.com/jwalton)",
+    "olivierntk <Olivier_Nguyen@intuit.com> (https://github.com/olivierntk)"
+  ],
   "main": "./index.js",
   "bin": {
     "istanbul-cobertura-badger": "./lib/cli.js"
