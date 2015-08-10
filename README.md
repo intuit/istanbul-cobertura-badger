@@ -259,6 +259,16 @@ $ istanbul-cobertura-badger -e 85 -g 70 -r test/fixture/istanbul-report.xml -d /
 Badge created at /tmp/coverage.svg
 ```
 
+CLI Version
+------
+
+You can print the current version of the project by using the -V option. It uses the package.json#version as the value.
+
+```
+$ istanbul-cobertura-badger -V
+1.0.0
+```
+
 Contributing
 ==============
 
