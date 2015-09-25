@@ -26,7 +26,7 @@
     "jwalton <npm@lucid.thedreaming.org> (https://github.com/jwalton)",
     "olivierntk <Olivier_Nguyen@intuit.com> (https://github.com/olivierntk)"
   ],
-  "main": "./index.js",
+  "main": "./lib/index.js",
   "bin": {
     "istanbul-cobertura-badger": "./lib/cli.js"
   },
