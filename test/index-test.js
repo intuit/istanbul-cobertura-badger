@@ -40,6 +40,51 @@ describe("istanbul-cobertura-badger", function() {
             if (err) {
               console.log(err);
             }
+            console.log("Deleted the badge file " + coverageBadgePath);
+
+            done();
+          });
+
+        });
+
+      });
+
+    });
+
+    it("should compute overall coverage over multiple packages and create the badge", function(done) {
+
+      // Use the fixture that's without problems
+      // Using defaults directory /coverage/
+      var opts = {
+        badgeFileName: "coverage-multiple",
+        destinationDir: destinationDir,
+        istanbulReportFile: path.resolve(__dirname, "fixture", "istanbul-report-multiple-packages.xml")
+      };
+
+      // Load the badge for the report
+      badger(opts, function parsingResults(err, badgeStatus) {
+        expect(err).to.be.null;
+        expect(badgeStatus).to.be.an("object");
+
+        console.log(badgeStatus);
+
+        var fileWithExtension = opts.badgeFileName + ".svg";
+        var coverageBadgePath = path.normalize(path.resolve(destinationDir, fileWithExtension));
+        expect(coverageBadgePath.indexOf(fileWithExtension)).to.be.above(0);
+
+        // Verify that the badge file was successfully created
+        fs.stat(coverageBadgePath, function gettingStats(err, stats) {
+          expect(err).to.be.null;
+          expect(stats).to.be.an("object");
+          expect(stats.isFile()).to.be.true;
+          expect(stats.size).to.be.above(0);
+
+          fs.unlink(coverageBadgePath, function(err) {
+            if (err) {
+              console.log(err);
+            }
+            console.log("Deleted the badge file " + coverageBadgePath);
+
             done();
           });
 
