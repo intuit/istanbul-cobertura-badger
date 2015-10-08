@@ -98,7 +98,8 @@ var coberturaBadger = require('istanbul-cobertura-badger');
 
 // Use the fixture that's without problems
 var opts = {
-  destinationDir: __dirname,
+  //badgeFileName: "cobertura", // No extension, Defaults to "coverage"
+  destinationDir: __dirname, // REQUIRED PARAMETER!
   istanbulReportFile: path.resolve(__dirname, "coverage", "cobertura-coverage.xml"),
   thresholds: {
     // overall percent >= excellent, green badge
@@ -193,6 +194,7 @@ $ istanbul-cobertura-badger
     -f, --defaults                      Use the default values for all the input.
     -e, --excellentThreashold <n>       The threshold for green badges, where coverage >= -e
     -g, --goodThreashold <n>            The threshold for yellow badges, where -g <= coverage < -e  
+    -b, --badgeFileName <badge>         The badge file name that will be saved.
     -r, --reportFile <report>           The istanbul cobertura XML file path.
     -d, --destinationDir <destination>  The directory where 'coverage.svg' will be generated at.
     -v, --verbose                       Prints the metadata for the command
