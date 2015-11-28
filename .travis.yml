@@ -4,6 +4,9 @@ node_js:
 - '0.12'
 - '0.11'
 - '0.10'
+- 'iojs'
+- '4.1'
+- '5.0'
 deploy:
   provider: npm
   email: marcello.desales@gmail.com
