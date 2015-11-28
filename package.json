@@ -12,9 +12,9 @@
     "github badge"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/marcellodesales/istanbul-cobertura-badger",
+  "homepage": "https://github.com/intuit/istanbul-cobertura-badger",
   "bugs": {
-    "url": "https://github.com/marcellodesales/istanbul-cobertura-badger/issues"
+    "url": "https://github.com/intuit/istanbul-cobertura-badger/issues"
   },
   "author": {
     "name": "Marcello de Sales",
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:marcellodesales/istanbul-cobertura-badger.git"
+    "url": "git@github.com:intuit/istanbul-cobertura-badger.git"
   },
   "scripts": {
     "pretest": "rm -rf coverage/ && jshint --reporter=node_modules/jshint-stylish lib/*.js test/*.js && ./node_modules/jscs/bin/jscs lib test",
