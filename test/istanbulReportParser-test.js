@@ -8,7 +8,6 @@ describe("Coverage Parser", function() {
   describe("Attempting to parse with wrong parameters", function() {
 
     it("should fail when not providing the parameter 'reportFilePath'.", function(done) {
-
       var reportFilePath = "";
 
       // Try loading the incorrect badge
