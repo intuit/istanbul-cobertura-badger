@@ -24,7 +24,7 @@ describe("downloader", function() {
 
     it("should fail when passing incorrect saveAtPath", function(done) {
 
-      var url = "http://google.com";
+      var url = "https://google.com";
       var saveAtPath = "";
 
       // Try loading the incorrect badge
@@ -54,7 +54,7 @@ describe("downloader", function() {
 
     it("should fail when passing incorrect saveAtPath type", function(done) {
 
-      var url = "http://google.com";
+      var url = "https://google.com";
       var saveAtPath = function() {};
 
       downloader(url, saveAtPath, function downloadResults(err, status) {
@@ -69,7 +69,7 @@ describe("downloader", function() {
 
     it("should fail when passing incorrect callback type", function(done) {
 
-      var url = "http://google.com";
+      var url = "https://google.com";
       var saveAtPath = "/tmp/file.jpg";
       var cb = "not-a-function";
 
@@ -100,7 +100,7 @@ describe("downloader", function() {
 
     it("should fail when passing a saveAtPath that does not exist", function(done) {
 
-      var url = "http://www.google.com/logo.png";
+      var url = "https://www.google.com/logo.png";
       // The current directory
       var saveAtPath = __dirname + "/not-existent/logo.png";
 
@@ -108,6 +108,26 @@ describe("downloader", function() {
         expect(err).to.be.an("Error");
         expect(status).to.be.undefined;
         expect(err.message).to.equal("The path '" + saveAtPath.replace("/logo.png", "") + "' does NOT exist!");
+
+        done();
+      });
+
+    });
+
+  });
+
+  describe("Attempting to download with incorrect URL", function() {
+
+    it("should just fail", function(done) {
+
+      var url = "https://www.google.com/images/srpr/NON-EXISTENT.png";
+      // The current directory
+      var saveAtPath = __dirname + "/logo.png";
+
+      downloader(url, saveAtPath, function downloadResults(err, status) {
+        expect(err).to.be.an("Error");
+        expect(status).to.be.undefined;
+        expect(err.message).to.equal("The resource at the given URL " + url + " does NOT exist");
 
         done();
       });

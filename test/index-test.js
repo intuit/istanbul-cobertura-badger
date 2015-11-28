@@ -10,6 +10,8 @@ var destinationDir = __dirname;
 describe("istanbul-cobertura-badger", function() {
 
   describe("Parsing existing reports", function() {
+    // As it will download a badge.
+    this.timeout(5000);
 
     it("should open the proper path, compute the overall coverage percentage and create the badge", function(done) {
 
@@ -52,7 +54,6 @@ describe("istanbul-cobertura-badger", function() {
     });
 
     it("should compute overall coverage over multiple packages and create the badge", function(done) {
-
       // Use the fixture that's without problems
       // Using defaults directory /coverage/
       var opts = {

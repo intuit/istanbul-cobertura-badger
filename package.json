@@ -42,7 +42,6 @@
   },
   "dependencies": {
     "commander": "^2.8.1",
-    "http-request": "^0.7.0",
     "xml-splitter": "~1.2.1"
   },
   "devDependencies": {
