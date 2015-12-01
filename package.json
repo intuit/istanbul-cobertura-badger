@@ -42,7 +42,8 @@
   },
   "dependencies": {
     "commander": "^2.8.1",
-    "xml-splitter": "~1.2.1"
+    "xml-splitter": "~1.2.1",
+    "xtend": "~4.0.1"
   },
   "devDependencies": {
     "chai": "^3.2.0",
