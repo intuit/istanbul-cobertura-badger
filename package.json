@@ -1,6 +1,6 @@
 {
   "name": "istanbul-cobertura-badger",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Istanbul test coverage report badger task.",
   "keywords": [
     "gulp",
