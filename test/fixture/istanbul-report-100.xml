@@ -1,0 +1,223 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="117"  lines-covered="117"  line-rate="1"  branches-valid="38"  branches-covered="38"  branch-rate="1"  timestamp="1438626075900" complexity="0" version="0.1">
+<sources>
+	<source>/home/mdesales/dev/github-intuit/servicesplatform-nodejs/sp-logging</source>
+</sources>
+<packages>
+	<package name="src"  line-rate="1"  branch-rate="1" >
+	<classes>
+		<class name="app_settings.js"  filename="src/app_settings.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="_resolveAppConfig"  hits="20"  signature="()V" >
+				<lines><line number="11"  hits="20" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="8"  signature="()V" >
+				<lines><line number="29"  hits="8" /></lines>
+			</method>
+			<method name="(anonymous_3)"  hits="8"  signature="()V" >
+				<lines><line number="52"  hits="8" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="8"  signature="()V" >
+				<lines><line number="86"  hits="8" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="5"  hits="1"  branch="false" />
+			<line number="11"  hits="1"  branch="false" />
+			<line number="12"  hits="20"  branch="true"  />
+			<line number="15"  hits="20"  branch="false" />
+			<line number="16"  hits="20"  branch="false" />
+			<line number="17"  hits="1"  branch="false" />
+			<line number="19"  hits="0"  branch="false" />
+			<line number="21"  hits="19"  branch="false" />
+			<line number="24"  hits="1"  branch="false" />
+			<line number="31"  hits="8"  branch="false" />
+			<line number="32"  hits="8"  branch="false" />
+			<line number="35"  hits="8"  branch="false" />
+			<line number="39"  hits="8"  branch="false" />
+			<line number="40"  hits="8"  branch="false" />
+			<line number="44"  hits="8"  branch="false" />
+			<line number="53"  hits="8"  branch="false" />
+			<line number="54"  hits="8"  branch="false" />
+			<line number="58"  hits="5"  branch="false" />
+			<line number="60"  hits="5"  branch="false" />
+			<line number="63"  hits="8"  branch="false" />
+			<line number="64"  hits="8"  branch="false" />
+			<line number="68"  hits="4"  branch="false" />
+			<line number="69"  hits="4"  branch="false"  />
+			<line number="70"  hits="1"  branch="false" />
+			<line number="73"  hits="1"  branch="false" />
+			<line number="77"  hits="4"  branch="false" />
+			<line number="79"  hits="4"  branch="false" />
+			<line number="87"  hits="8"  branch="false" />
+			<line number="88"  hits="8"  branch="false" />
+			<line number="91"  hits="2"  branch="false" />
+			<line number="94"  hits="8"  branch="false" />
+			<line number="95"  hits="8"  branch="false" />
+			<line number="99"  hits="2"  branch="false" />
+		</lines>
+		</class>
+		<class name="audit_logger.js"  filename="src/audit_logger.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="auditLogger"  hits="2"  signature="()V" >
+				<lines><line number="22"  hits="2" /></lines>
+			</method>
+			<method name="audit"  hits="3"  signature="()V" >
+				<lines><line number="30"  hits="3" /></lines>
+			</method>
+			<method name="defaultLevelFn"  hits="3"  signature="()V" >
+				<lines><line number="67"  hits="3" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="7"  hits="1"  branch="false" />
+			<line number="22"  hits="1"  branch="false" />
+			<line number="25"  hits="2"  branch="false" />
+			<line number="30"  hits="1"  branch="false" />
+			<line number="31"  hits="0"  branch="false" />
+			<line number="32"  hits="0"  branch="false" />
+			<line number="33"  hits="0"  branch="false" />
+			<line number="37"  hits="0"  branch="false" />
+			<line number="40"  hits="0"  branch="false" />
+			<line number="54"  hits="0"  branch="false" />
+			<line number="55"  hits="0"  branch="false" />
+			<line number="57"  hits="0"  branch="false" />
+			<line number="59"  hits="0"  branch="false" />
+			<line number="61"  hits="2"  branch="false" />
+			<line number="67"  hits="1"  branch="false" />
+			<line number="68"  hits="0"  branch="false" />
+			<line number="69"  hits="0"  branch="false" />
+			<line number="71"  hits="0"  branch="false" />
+			<line number="72"  hits="0"  branch="false" />
+			<line number="74"  hits="0"  branch="false" />
+			<line number="77"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="bunyan_settings.js"  filename="src/bunyan_settings.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="(anonymous_1)"  hits="8"  signature="()V" >
+				<lines><line number="22"  hits="8" /></lines>
+			</method>
+			<method name="_buildDefaultLogProperties"  hits="8"  signature="()V" >
+				<lines><line number="42"  hits="8" /></lines>
+			</method>
+			<method name="_buildBunyanSerializers"  hits="8"  signature="()V" >
+				<lines><line number="53"  hits="8" /></lines>
+			</method>
+			<method name="_buildBunyanStreams"  hits="8"  signature="()V" >
+				<lines><line number="61"  hits="8" /></lines>
+			</method>
+			<method name="(anonymous_5)"  hits="2"  signature="()V" >
+				<lines><line number="76"  hits="2" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="5"  hits="1"  branch="false" />
+			<line number="6"  hits="1"  branch="false" />
+			<line number="7"  hits="1"  branch="false" />
+			<line number="8"  hits="1"  branch="false" />
+			<line number="9"  hits="1"  branch="false" />
+			<line number="10"  hits="1"  branch="false" />
+			<line number="12"  hits="1"  branch="false" />
+			<line number="13"  hits="1"  branch="false" />
+			<line number="16"  hits="1"  branch="false" />
+			<line number="24"  hits="8"  branch="false" />
+			<line number="33"  hits="8"  branch="false" />
+			<line number="34"  hits="8"  branch="false" />
+			<line number="42"  hits="1"  branch="false" />
+			<line number="43"  hits="8"  branch="false" />
+			<line number="53"  hits="1"  branch="false" />
+			<line number="54"  hits="8"  branch="false" />
+			<line number="61"  hits="1"  branch="false" />
+			<line number="63"  hits="8"  branch="false" />
+			<line number="66"  hits="8"  branch="false" />
+			<line number="69"  hits="8"  branch="false" />
+			<line number="76"  hits="8"  branch="false" />
+			<line number="77"  hits="2"  branch="false" />
+			<line number="80"  hits="8"  branch="false" />
+		</lines>
+		</class>
+		<class name="default_settings.js"  filename="src/default_settings.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="5"  hits="1"  branch="false" />
+			<line number="6"  hits="1"  branch="false" />
+			<line number="8"  hits="1"  branch="false" />
+			<line number="13"  hits="1"  branch="false" />
+			<line number="18"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="logger.js"  filename="src/logger.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="(anonymous_1)"  hits="3"  signature="()V" >
+				<lines><line number="38"  hits="3" /></lines>
+			</method>
+			<method name="_customLogger"  hits="8"  signature="()V" >
+				<lines><line number="46"  hits="8" /></lines>
+			</method>
+			<method name="(anonymous_3)"  hits="97"  signature="()V" >
+				<lines><line number="66"  hits="97" /></lines>
+			</method>
+			<method name="(anonymous_4)"  hits="6"  signature="()V" >
+				<lines><line number="69"  hits="6" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="6"  hits="1"  branch="false" />
+			<line number="7"  hits="1"  branch="false" />
+			<line number="8"  hits="1"  branch="false" />
+			<line number="10"  hits="1"  branch="false" />
+			<line number="11"  hits="1"  branch="false" />
+			<line number="12"  hits="1"  branch="false" />
+			<line number="17"  hits="1"  branch="false" />
+			<line number="23"  hits="1"  branch="false" />
+			<line number="28"  hits="1"  branch="false" />
+			<line number="39"  hits="0"  branch="false" />
+			<line number="46"  hits="1"  branch="false" />
+			<line number="48"  hits="8"  branch="false" />
+			<line number="51"  hits="8"  branch="false" />
+			<line number="54"  hits="8"  branch="false" />
+			<line number="57"  hits="8"  branch="false" />
+			<line number="60"  hits="8"  branch="false" />
+			<line number="63"  hits="8"  branch="false" />
+			<line number="66"  hits="8"  branch="false" />
+			<line number="67"  hits="97"  branch="false" />
+			<line number="69"  hits="8"  branch="false" />
+			<line number="70"  hits="6"  branch="false" />
+			<line number="73"  hits="8"  branch="false" />
+		</lines>
+		</class>
+		<class name="sp_serializers.js"  filename="src/sp_serializers.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="auditRequestSerializer"  hits="1"  signature="()V" >
+				<lines><line number="12"  hits="1" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="4"  signature="()V" >
+				<lines><line number="17"  hits="4" /></lines>
+			</method>
+			<method name="auditResponseSerializer"  hits="5"  signature="()V" >
+				<lines><line number="35"  hits="5" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="5"  hits="1"  branch="false" />
+			<line number="8"  hits="1"  branch="false" />
+			<line number="13"  hits="1"  branch="false" />
+			<line number="14"  hits="0"  branch="false" />
+			<line number="16"  hits="1"  branch="false" />
+			<line number="17"  hits="1"  branch="false" />
+			<line number="18"  hits="0"  branch="false" />
+			<line number="19"  hits="0"  branch="false" />
+			<line number="20"  hits="0"  branch="false" />
+			<line number="22"  hits="1"  branch="false" />
+			<line number="36"  hits="0"  branch="false" />
+			<line number="37"  hits="0"  branch="false" />
+			<line number="44"  hits="0"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+</packages>
+</coverage>
