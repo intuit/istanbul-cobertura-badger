@@ -27,7 +27,7 @@ describe("istanbul-cobertura-badger", function() {
         expect(badgeStatus).to.be.an("object");
 
         console.log(badgeStatus);
-        expect(badgeStatus.overallPercent).to.equal("100");
+        expect(badgeStatus.overallPercent).to.equal(100);
 
         var coverageBadgePath = path.normalize(path.resolve(destinationDir, "coverage.svg"));
         expect(coverageBadgePath.indexOf("coverage.svg")).to.be.above(0);

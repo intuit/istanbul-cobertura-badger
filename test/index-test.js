@@ -11,7 +11,7 @@ describe("istanbul-cobertura-badger", function() {
 
   describe("Parsing existing reports", function() {
     // As it will download a badge.
-    this.timeout(5000);
+    this.timeout(10000);
 
     it("should open the proper path, compute the overall coverage percentage and create the badge", function(done) {
 
