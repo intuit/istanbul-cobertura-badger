@@ -201,13 +201,13 @@ $ istanbul-cobertura-badger
 
   Examples:
 
-    $ istanbul-cobertura-coverage -e 90 -g 65 -r coverage/cobertura.xml -d coverage/
+    $ istanbul-cobertura-badger -e 90 -g 65 -r coverage/cobertura.xml -d coverage/
       * Green: coverage >= 90
       * Yellow: 65 <= coverage < 90
       * Red: coverage < 65
       * Created at the coverage directory from the given report.
 
-    $ istanbul-cobertura-coverage -e 80 -d /tmp/build
+    $ istanbul-cobertura-badger -e 80 -d /tmp/build
       * Green: coverage >= 80
       * Yellow: 65 <= coverage < 80
       * Red: coverage < 65
