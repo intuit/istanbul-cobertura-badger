@@ -192,8 +192,8 @@ $ istanbul-cobertura-badger
     -h, --help                          output usage information
     -V, --version                       output the version number
     -f, --defaults                      Use the default values for all the input.
-    -e, --excellentThreashold <n>       The threshold for green badges, where coverage >= -e
-    -g, --goodThreashold <n>            The threshold for yellow badges, where -g <= coverage < -e  
+    -e, --excellentThreshold <n>       The threshold for green badges, where coverage >= -e
+    -g, --goodThreshold <n>            The threshold for yellow badges, where -g <= coverage < -e  
     -b, --badgeFileName <badge>         The badge file name that will be saved.
     -r, --reportFile <report>           The istanbul cobertura XML file path.
     -d, --destinationDir <destination>  The directory where 'coverage.svg' will be generated at.
