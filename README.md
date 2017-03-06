@@ -9,8 +9,8 @@ Creates a coverage badge by reading the Cobertura XML coverage report from node-
 Requirements
 ========
 
-I started to work with Node a few months ago, and I recently stumble upon many different badges on GitHub pages,
-including code coverage. I posted a question on Stackoverflow about it:
+I started to work with Node a few months ago, and I recently stumbled upon many different badges on GitHub pages,
+including code coverage. I posted a question on Stack Overflow about it:
 
 http://stackoverflow.com/questions/26028024/how-to-make-a-gulp-code-coverage-badge
 
@@ -178,7 +178,7 @@ You can now use the CLI to create the badge for ANY XML Cobertura report created
 CLI Options
 ------
 
-The cli prints the following help.
+The CLI prints the following help:
 
 ```
 $ istanbul-cobertura-badger 
