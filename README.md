@@ -145,7 +145,7 @@ gulp.task('test', function() {
     .pipe(istanbul()) // coverying files
     .on('finish', function () {
       gulp.src(['test/*.js'])
-        .pipe(mocha({reporter: 'spec'})) // different reporters at http://visionmedia.github.io/mocha/#reporters
+        .pipe(mocha({reporter: 'spec'})) // different reporters at http://mochajs.org/#reporters
         .pipe(istanbul.writeReports({
           reporters: ['cobertura', 'text-summary', 'html'], // https://www.npmjs.org/package/gulp-istanbul#reporters
           reportOpts: { dir: './docs/tests' }
